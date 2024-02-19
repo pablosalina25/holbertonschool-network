@@ -1,0 +1,9 @@
+sh script that pings an IP address passed as an argument.
+# This script takes an IP address as an argument and sends ICMP echo requests to it.
+# If the IP address is reachable, it waits for a response for up to 5 seconds.
+# If no IP address is provided, it displays a usage message.
+if [ "$1" ]; then
+    ping -w 5 "$1"
+else
+    echo "Usage: 5-is_the_host_on_the_network {IP_ADDRESS}"
+fi
